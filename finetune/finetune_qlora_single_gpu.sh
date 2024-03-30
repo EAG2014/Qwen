@@ -2,10 +2,10 @@
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 DIR=`pwd`
 
-MODEL="Qwen/Qwen-7B-Chat-Int4" # Set the path if you do not want to load from huggingface directly
+MODEL="/kaggle/working/Qwen-1_8B-Chat" # Set the path if you do not want to load from huggingface directly
 # ATTENTION: specify the path to your training data, which should be a json file consisting of a list of conversations.
 # See the section for finetuning in README for more information.
-DATA="path_to_data"
+DATA="/kaggle/working/Qwen/finetune/train.json"
 
 function usage() {
     echo '
@@ -63,4 +63,4 @@ python finetune.py \
   --gradient_checkpointing \
   --use_lora \
   --q_lora \
-  --deepspeed finetune/ds_config_zero2.json
+  --deepspeed ds_config_zero2.json
