@@ -38,7 +38,7 @@ done
 export CUDA_VISIBLE_DEVICES=0
 
 # Remember to use --fp16 instead of --bf16 due to autogptq
-python /kaggle/working/Qwen/finetune.py \
+python finetune.py \
   --model_name_or_path $MODEL \
   --data_path $DATA \
   --fp16 True \
