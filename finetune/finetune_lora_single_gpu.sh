@@ -36,7 +36,7 @@ done
 
 export CUDA_VISIBLE_DEVICES=0
 
-python /kaggle/working/Qwen/finetune.py \
+python finetune.py \
   --model_name_or_path $MODEL \
   --data_path $DATA \
   --bf16 True \
