@@ -63,4 +63,4 @@ python /kaggle/working/Qwen/finetune.py \
   --gradient_checkpointing \
   --use_lora \
   --q_lora \
-  --deepspeed ds_config_zero2.json
+  --deepspeed finetune/ds_config_zero2.json
